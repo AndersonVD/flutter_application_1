@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/model/films_model.dart';
-import 'package:flutter_application_1/api_service.dart';
+import '../model/films_model.dart';
+import '../services/api_service.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -19,7 +19,7 @@ class _HomeState extends State<Home> {
   }
 
   void _getData() async {
-    _userModel = (await ApiService().getUsers())!;
+    _userModel = (await ApiService().getUsers())!.cast<FilmsModel>();
     Future.delayed(const Duration(seconds: 1)).then((value) => setState(() {}));
   }
 
@@ -31,7 +31,8 @@ class _HomeState extends State<Home> {
       ),
       body: _userModel == null || _userModel!.isEmpty
           ? const Center(
-              child: CircularProgressIndicator(),
+              child: CircularProgressIndicator(
+                  backgroundColor: Color.fromARGB(255, 28, 26, 26)),
             )
           : ListView.builder(
               itemCount: _userModel!.length,

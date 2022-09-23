@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/home.dart';
-import 'package:flutter_application_1/tela2.dart';
+import 'screens/home.dart';
+import 'screens/tela2.dart';
 
 void main() => runApp(const MyApp());
 
