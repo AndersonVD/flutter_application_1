@@ -27,7 +27,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('REST API Example'),
+        title: const Text('jhgkjh'),
       ),
       body: _userModel == null || _userModel!.isEmpty
           ? const Center(
@@ -42,8 +42,9 @@ class _HomeState extends State<Home> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          Text(_userModel![index].id.toString()),
+                          // Text(_userModel![index].id.toString()),
                           Text(_userModel![index].title),
+                          Text(_userModel![index].director),
                         ],
                       ),
                       const SizedBox(
