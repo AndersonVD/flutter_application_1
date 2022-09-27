@@ -27,7 +27,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('jhgkjh'),
+        title: const Text('Tela principal'),
       ),
       body: _userModel == null || _userModel!.isEmpty
           ? const Center(
@@ -49,9 +49,15 @@ class _HomeState extends State<Home> {
                         ],
                       ),
                       const SizedBox(
-                        height: 20.0,
+                        height: 10.0,
+                        width: 10.0,
                       ),
-                      Image.network(_userModel![index].image)
+                      Image.network(
+                        _userModel![index].image,
+                        width: 100,
+                        height: 200,
+                        // fit: BoxFit.cover,
+                      )
                     ],
                   ),
                 );
