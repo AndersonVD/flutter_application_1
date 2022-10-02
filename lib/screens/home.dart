@@ -27,7 +27,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Tela principal'),
+        title: const Text('Cinevideo Studio Ghibli'),
       ),
       body: _userModel == null || _userModel!.isEmpty
           ? const Center(
@@ -46,21 +46,32 @@ class _HomeState extends State<Home> {
                           // Text(_userModel![index].id.toString()),
                           Text(_userModel![index].title),
                           Text(_userModel![index].director),
+                          // ButtonTheme(
+                          //   child: ElevatedButton(
+                          //     onPressed: () {
+                          //       Navigator.pushNamed(context, '/tela2',
+                          //           arguments: _userModel![index]);
+                          //     },
+                          //     child: const Text('Detalhes'),
+                          //   ),
+                          // ),
                         ],
                       ),
-                      const SizedBox(
-                        height: 10.0,
-                        width: 10.0,
-                      ),
-                      Image.network(
-                        _userModel![index].image,
-                        width: 100,
-                        height: 200,
-                        // fit: BoxFit.cover,
-                      )
                     ],
                   ),
                 );
+                      InkWell(
+                        onTap: () {
+                          Navigator.pushNamed(context, '/tela2',
+                              arguments: _userModel![index]);
+                        },
+                        child: Ink.network(
+                          _userModel![index].image,
+                          height: 200,
+                          width: 200,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
               },
             ),
     );
