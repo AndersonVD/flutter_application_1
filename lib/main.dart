@@ -1,5 +1,5 @@
-import 'package:flutter_application_1/screens/home.dart';
-import 'package:flutter_application_1/screens/tela2.dart';
+import 'package:Totoro/screens/home.dart';
+import 'package:Totoro/screens/tela2.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(const MyApp());
