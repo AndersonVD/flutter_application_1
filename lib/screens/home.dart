@@ -27,7 +27,8 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('jhgkjh'),
+        backgroundColor: Colors.blue,
+        title: const Text('Studio Ghibli Films'),
       ),
       body: _userModel == null || _userModel!.isEmpty
           ? const Center(
