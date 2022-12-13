@@ -19,7 +19,7 @@ class _HomeState extends State<Home> {
   }
 
   void _getData() async {
-    _userModel = (await ApiService().getUsers())!.cast<FilmsModel>();
+    _userModel = (await ApiService().getUsers())?.cast<FilmsModel>();
     Future.delayed(const Duration(seconds: 1)).then((value) => setState(() {}));
   }
 
